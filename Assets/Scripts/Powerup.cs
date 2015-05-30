@@ -7,7 +7,7 @@ public class Powerup : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag ("Player")) {
-			Debug.Log("Powerup touched");
+			other.gameObject.transform.parent.GetComponent<DisplayCombatText>().displayCombatText(this.name);
 			Destroy(gameObject);
 		}
 	}

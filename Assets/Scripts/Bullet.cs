@@ -55,10 +55,11 @@ public class Bullet : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.transform.name);
+        //Debug.Log(collision.transform.name);
         if (collision.gameObject.tag.Equals("Player") && collision.transform.name != owner)
         {
             collision.gameObject.SendMessage("affectLife", -damage);
+			collision.gameObject.GetComponent<DisplayCombatText>().displayCombatText(this.name);
             Destroy();
         }
     }

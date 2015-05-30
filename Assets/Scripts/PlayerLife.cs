@@ -20,18 +20,27 @@ public class PlayerLife : MonoBehaviour {
 			Destroy (this.gameObject);
 	}
 
-	void OnGUI () {
-		Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-		screenPosition.y = Screen.height - screenPosition.y; // the GUI coordinate system is upside down relative to every other coordinate system
-
-		Rect currentLifeBar = new Rect (screenPosition.x - 0.5f, screenPosition.y - 1, Utils.minMaxNormalization(_life, 0, 100, 0, 5), 1);
-
-		Texture2D currentLifeTexture = new Texture2D (_life, 10);
+	void OnGUI () {	
+		Texture2D currentLifeTexture = new Texture2D (100, 10);
 		for (int x = 0; x < currentLifeTexture.width; x++)
-			for (int y = 0; y < currentLifeTexture.height; y++)
-				currentLifeTexture.SetPixel (x, y, new Color((100 - _life)/100, _life / 100, 0));
+			for (int y = 0; y < currentLifeTexture.height; y++){
+			if(y == 0 || y == 9 || x == 99) currentLifeTexture.SetPixel (x, y, new Color(0,0,0,1));
+				else if(x > _life) currentLifeTexture.SetPixel (x, y, new Color(0,0,0,0));
+				else {
+					if(gameObject.name.Equals("Player 1"))
+						currentLifeTexture.SetPixel (x, y, Utils.CreateColor(x, 1, 209, 229));
+					if(gameObject.name.Equals("Player 2"))
+						currentLifeTexture.SetPixel (x, y, Utils.CreateColor(x, 176, 0, 181));
+					if(gameObject.name.Equals("Player 3"))
+						currentLifeTexture.SetPixel (x, y, Utils.CreateColor(x, 180, 212, 85)); 
+				}
+			}
 		currentLifeTexture.Apply ();
-		GUI.Label(currentLifeBar, currentLifeTexture);
-		//GUI.Label(new Rect(10, 40, currentLifeTexture.width, currentLifeTexture.height), currentLifeTexture);
+		if(gameObject.name.Equals("Player 1"))
+			GUI.DrawTexture (new Rect (Screen.width * 0.0625f, Screen.height * 0.05f, Screen.width * 0.25f, Screen.height * 0.05f), currentLifeTexture);
+		if(gameObject.name.Equals("Player 2"))
+			GUI.DrawTexture (new Rect (Screen.width * 0.375f, Screen.height * 0.05f, Screen.width * 0.25f, Screen.height * 0.05f), currentLifeTexture);
+		if(gameObject.name.Equals("Player 3"))
+			GUI.DrawTexture (new Rect (Screen.width * 0.6875f, Screen.height * 0.05f, Screen.width * 0.25f, Screen.height * 0.05f), currentLifeTexture);
 	}
 }
