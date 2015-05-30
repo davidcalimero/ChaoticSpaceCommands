@@ -27,7 +27,7 @@ public class PowerUpCreator : MonoBehaviour {
 
 
 			GameObject o = (GameObject) Instantiate(Powerup, new Vector2(Random.Range(x2,x1), Random.Range(y2,y1)), Quaternion.identity);
-			o.GetComponent<Powerup>().setEffect(_effects[Random.Range (0,2)]);
+			o.GetComponent<Powerup>().setEffect(_effects[Random.Range(0, 2)]);
 		}
 
 		yield return new WaitForSeconds(respawntime);

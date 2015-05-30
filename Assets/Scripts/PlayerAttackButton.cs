@@ -43,19 +43,15 @@ public class PlayerAttackButton : RandomButton {
     }
 
 	void StarFire(){
-		shootPoint = transform.FindChild("ShootPoint");
-		physics = GetComponent<Rigidbody2D>();
-
 		int shotsFired = 0;
 
-		while (shotsFired < 11) {
+		while (shotsFired < 10) {
 			//Instantiate bullet
 			if(canStarFire){
 				Vector3 misdirection = Quaternion.Euler(0, 0, -36 * shotsFired) * transform.up;
-				Debug.Log ("teste");
 				GameObject bulletFired = Instantiate (bullet, transform.position + misdirection * 3, Quaternion.Euler(0, 0, -36 * shotsFired)) as GameObject;
 				bulletFired.SendMessage ("SetOwner", transform.name);
-				StartCoroutine("waitBulletTime");
+				//StartCoroutine("waitBulletTime");
 				shotsFired++;
 			}
 		}
