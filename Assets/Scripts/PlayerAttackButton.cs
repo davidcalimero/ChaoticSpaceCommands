@@ -4,20 +4,30 @@ using System.Collections;
 public class PlayerAttackButton : RandomButton {
 
     public float fallBackForce = 10;
+    public float reloadTime = 100;
     public GameObject bullet;
     private Transform shootPoint;
     private Rigidbody2D physics;
+    private float reloadTimeTemp;
+
+
+    void Awake()
+    {
+        reloadTimeTemp = reloadTime;
+    }
 
 
 	void Update ()
     {
-        if (Input.GetKeyUp(_key))
+        if (Input.GetKeyUp(_key) && reloadTimeTemp >= reloadTime)
         {
-            fire();
+            Fire();
+            reloadTimeTemp = 0;
         }
+        reloadTimeTemp++;
 	}
 
-    void fire()
+    void Fire()
     {
         shootPoint = transform.FindChild("ShootPoint");
         physics = GetComponent<Rigidbody2D>();

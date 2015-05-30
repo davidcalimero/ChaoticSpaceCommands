@@ -3,8 +3,10 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
 
-    public float timeToLive = 1.5f;
-    public float velocity = 400;
+    public float damage = 10f;
+    public float timeToLive = 5f;
+    public float velocity = 500;
+    public GameObject explosion;
 
     private SpriteRenderer sprite;
     private TrailRenderer trail;
@@ -36,5 +38,21 @@ public class Bullet : MonoBehaviour {
         color.a = Mathf.SmoothStep(1.0f, 0.0f, t);
         sprite.color = color;
         trail.material.color = color;
+    }
+
+    void Destroy()
+    {
+        Instantiate(explosion, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player") /*&& collision.transform.parent.name != transform.name*/)
+        {
+            collision.gameObject.SendMessage("affectLife", -damage);
+            Destroy();
+        }
     }
 }
