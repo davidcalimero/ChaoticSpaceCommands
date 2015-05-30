@@ -12,7 +12,7 @@ public class PowerUpCreator : MonoBehaviour {
 
 	IEnumerator PowerUpShare(){
 		if (GameObject.FindGameObjectWithTag("Powerup") == null){
-			Instantiate(Powerup, new Vector2(Random.Range(-2.4F,2.4F), Random.Range(-1.4F,1.4F)), Quaternion.identity);
+			Instantiate(Powerup, new Vector2(Random.Range(-28F,25F), Random.Range(-0.5F,-28F)), Quaternion.identity);
 		}
 
 		yield return new WaitForSeconds(respawntime);
