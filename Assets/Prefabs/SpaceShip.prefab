@@ -143,8 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireButton: b
+  fallBackForce: 25
   bullet: {fileID: 173802, guid: f193db2fa433a3e4f9a5e6ffeffbc62b, type: 2}
-  shootPoint: {fileID: 0}
 --- !u!114 &11450714
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -4,9 +4,9 @@ using System.Collections;
 public class Powerup : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.CompareTag ("Powerup")) {
+		if (other.CompareTag ("Player")) {
 			Debug.Log("Powerup touched");
-			Destroy(other.gameObject);
+			Destroy(gameObject);
 		}
 	}
 
