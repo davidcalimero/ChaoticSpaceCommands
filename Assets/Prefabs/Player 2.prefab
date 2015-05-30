@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11460382}
   - 114: {fileID: 11413708}
   - 114: {fileID: 11437926}
+  - 114: {fileID: 11486464}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -229,6 +230,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torqueForce: 60
+--- !u!114 &11486464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6186ed5c27b4b479591d3adb4c2518c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 5
 --- !u!212 &21270832
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -47,6 +47,7 @@ GameObject:
   - 114: {fileID: 11413146}
   - 114: {fileID: 11454946}
   - 114: {fileID: 11432800}
+  - 114: {fileID: 11484474}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -271,6 +272,18 @@ MonoBehaviour:
   fallBackForce: 10
   reloadTime: 100
   bullet: {fileID: 173802, guid: f193db2fa433a3e4f9a5e6ffeffbc62b, type: 2}
+--- !u!114 &11484474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6186ed5c27b4b479591d3adb4c2518c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 5
 --- !u!212 &21236380
 SpriteRenderer:
   m_ObjectHideFlags: 1
