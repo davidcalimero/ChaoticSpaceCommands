@@ -3,7 +3,7 @@ using System.Collections;
 
 public class logCode : MonoBehaviour {
 
-	public string[] pilha = new string[6]{"The Chaotic Game","(A)(Z)-Player one","(L)(P)-Player 2","(V)(B)-Player 3","Everything Else...","...Is Everlasting Chaos!!"};
+	string[] pilha = new string[6]{"The Chaotic Game","(A)(Z)-Player one","(L)(P)-Player 2","(V)(B)-Player 3","Everything Else...","...Is Everlasting Chaos!!"};
 
 	// Use this for initialization
 	void Start () {
