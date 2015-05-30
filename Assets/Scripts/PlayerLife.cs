@@ -4,14 +4,16 @@ using System.Collections;
 public class PlayerLife : MonoBehaviour {
 
 	private int _life;
+    public int maxLife = 100;
 
 	// Use this for initialization
 	void Start () {
-		_life = 100;
+        _life = maxLife;
 	}
 
 	public void affectLife(int newAmmount){
 		_life += newAmmount;
+        if (_life > maxLife) _life = maxLife;
 	}
 	
 	// Update is called once per frame
