@@ -49,7 +49,7 @@ GameObject:
   - 114: {fileID: 11444636}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,6 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _key: m
   fallBackForce: 10
+  reloadTime: 100
   bullet: {fileID: 173802, guid: f193db2fa433a3e4f9a5e6ffeffbc62b, type: 2}
 --- !u!114 &11455972
 MonoBehaviour:
@@ -266,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7343b96563a9f4ca8656743887c213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationAngle: 5
+  torqueForce: 60
 --- !u!212 &21238850
 SpriteRenderer:
   m_ObjectHideFlags: 1
