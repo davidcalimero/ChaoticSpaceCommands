@@ -2101,7 +2101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c90e3e0a8eb49cf93ab8b5326c2e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _randomKeyTimeout: 40
+  _randomKeyTimeout: 25
+  info: {fileID: 1409582202}
 --- !u!1001 &967656037
 Prefab:
   m_ObjectHideFlags: 0
@@ -3182,7 +3183,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1409582203}
   - 222: {fileID: 1409582205}
-  - 114: {fileID: 1409582206}
+  - 114: {fileID: 1409582204}
   m_Layer: 5
   m_Name: info
   m_TagString: Untagged
@@ -3204,16 +3205,10 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -312, y: 31}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -3, y: -189}
+  m_SizeDelta: {x: 791, y: 60}
   m_Pivot: {x: .5, y: .5}
---- !u!222 &1409582205
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1409582202}
---- !u!114 &1409582206
+--- !u!114 &1409582204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -3221,9 +3216,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1409582202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dfc54ae9b16e7e4587661d1e8bc594f, type: 3}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1409582205
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409582202}
 --- !u!4 &1415294561 stripped
 Transform:
   m_PrefabParentObject: {fileID: 461456, guid: d29f2384a0bf7a24b988143348135a73, type: 2}

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 
 //controls the random keys of all the players as a server
@@ -12,6 +13,9 @@ public class GlobalRandomKeyManager : MonoBehaviour {
 	
 	private List<string> _possibleKeys; //keyboard keys allowed
 	private int _possibleKeysLenght;
+    public GameObject info;
+
+    private bool showButtonsChangeMsg = false;
 
 
 	//after _randomKeyTimeout time, assigns new unused random key for the registered buttons
@@ -23,6 +27,9 @@ public class GlobalRandomKeyManager : MonoBehaviour {
 					((RandomButton)button).setRandomKey (getUnusedRandomKey (previousKey));
 				}
 			}
+            showButtonsChangeMsg = true;
+            yield return new WaitForSeconds (5);
+            showButtonsChangeMsg = false;
 			yield return new WaitForSeconds (_randomKeyTimeout);
 			StartCoroutine ("renewRandomKeys");
 		}
@@ -70,4 +77,11 @@ public class GlobalRandomKeyManager : MonoBehaviour {
 	void Start () {
 		StartCoroutine("renewRandomKeys");
 	}
+
+    void OnGUI()
+    {
+        if (showButtonsChangeMsg)
+            info.GetComponent<Text>().text = "BUTTONS SHUFFLEEEEE BITCHEEEES!";
+        else info.GetComponent<Text>().text = "";
+    }
 }
