@@ -119,7 +119,7 @@ MonoBehaviour:
   damage: 10
   timeToLive: 5
   velocity: 600
-  explosion: {fileID: 147818, guid: c497e41fe37ed374f9f59bc1ab0f9ec5, type: 2}
+  explosion: {fileID: 122606, guid: 62e107463825ece4e82a2048c9e660d2, type: 2}
 --- !u!212 &21266326
 SpriteRenderer:
   m_ObjectHideFlags: 1
