@@ -35,13 +35,9 @@ public class logCode : MonoBehaviour {
 	}
 
 	void OnGUI(){
-<<<<<<< HEAD
 		GameObject anchor = GameObject.Find("info");
 		float x1 = anchor.transform.position.x;
 		float y1 = anchor.transform.position.y;
 		GUI.Label(new Rect(x1,y1,1000,2000), fullString());
-=======
-		GUI.Label(new Rect(Screen.width * 0.09f,Screen.height*0.16f,1000,2000), fullString());
->>>>>>> origin/master
 	}
 }
