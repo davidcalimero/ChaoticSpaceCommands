@@ -274,7 +274,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4279966582
+        rgba: 4278190335
       minMaxState: 0
     startSize:
       scalar: .200000003
@@ -397,7 +397,7 @@ ParticleSystem:
           outSlope: 22.3405514
           tangentMode: 0
         - time: .0120589659
-          value: .13180998
+          value: 0
           inSlope: .0634789467
           outSlope: .0634789467
           tangentMode: 0
