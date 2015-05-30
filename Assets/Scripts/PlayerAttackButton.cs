@@ -36,6 +36,7 @@ public class PlayerAttackButton : RandomButton {
         physics.AddForce(direction * fallBackForce);
 
         //Instantiate bullet
-        Instantiate(bullet, shootPoint.position, transform.rotation);
+        GameObject bulletFired = Instantiate(bullet, shootPoint.position, transform.rotation) as GameObject;
+        bulletFired.SendMessage("SetOwner", transform.name);
     }
 }

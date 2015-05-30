@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour {
     private SpriteRenderer sprite;
     private TrailRenderer trail;
     private float startTime;
+    private string owner;
 
 	void Start ()
     {
@@ -31,6 +32,11 @@ public class Bullet : MonoBehaviour {
             Destroy(gameObject);
     }
 
+    public void SetOwner(string name)
+    {
+        owner = name;
+    }
+
     void FadeOut()
     {
         float t = (Time.time - startTime) / timeToLive;
@@ -49,7 +55,8 @@ public class Bullet : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player") /*&& collision.transform.parent.name != transform.name*/)
+        Debug.Log(collision.transform.name);
+        if (collision.gameObject.tag.Equals("Player") && collision.transform.name != owner)
         {
             collision.gameObject.SendMessage("affectLife", -damage);
             Destroy();
