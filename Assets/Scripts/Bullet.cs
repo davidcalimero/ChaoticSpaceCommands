@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
 
-    public float damage = 10f;
+    public float damage = 20f;
     public float timeToLive = 5f;
     public float velocity = 500;
     public GameObject explosion;

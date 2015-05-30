@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PowerUpCreator : MonoBehaviour {
+
+	List<string> _effects = new List<string>(){"star", "heal"};
 
 	// Use this for initialization
 	public GameObject Powerup;
@@ -23,7 +26,8 @@ public class PowerUpCreator : MonoBehaviour {
 			float y2 = a2.transform.position.y;
 
 
-			Instantiate(Powerup, new Vector2(Random.Range(x2,x1), Random.Range(y2,y1)), Quaternion.identity);
+			GameObject o = (GameObject) Instantiate(Powerup, new Vector2(Random.Range(x2,x1), Random.Range(y2,y1)), Quaternion.identity);
+			o.GetComponent<Powerup>().setEffect(_effects[Random.Range (0,2)]);
 		}
 
 		yield return new WaitForSeconds(respawntime);

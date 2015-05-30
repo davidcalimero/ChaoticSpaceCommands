@@ -24,7 +24,7 @@ public class PlayerLife : MonoBehaviour {
 		Texture2D currentLifeTexture = new Texture2D (100, 10);
 		for (int x = 0; x < currentLifeTexture.width; x++)
 			for (int y = 0; y < currentLifeTexture.height; y++){
-			if(y == 0 || y == 9 || x == 99) currentLifeTexture.SetPixel (x, y, new Color(0,0,0,1));
+			if(y == 0 || y == 9 || x == 99) currentLifeTexture.SetPixel (x, y, new Color(1,1,1,1));
 				else if(x > _life) currentLifeTexture.SetPixel (x, y, new Color(0,0,0,0));
 				else {
 					if(gameObject.name.Equals("Player 1"))

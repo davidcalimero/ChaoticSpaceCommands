@@ -14,10 +14,16 @@ public class DisplayCombatText : MonoBehaviour {
 
 	//depending on who hit it, display a text over the thing hit!
 	public void displayCombatText(string name){
-		if (name.Equals ("Powerups(Clone)")) {
+		if (name.Equals ("star")) {
+			_style.normal.textColor = Color.yellow;
+			_displayText = "Star Shower!";
+			StartCoroutine ("waitDisplayTime");
+			this.SendMessage("StarFire", SendMessageOptions.DontRequireReceiver);
+		} else if (name.Equals("heal")){
 			_style.normal.textColor = Color.green;
-			_displayText = "Power up!!";
-			StartCoroutine("waitDisplayTime");
+			_displayText = "Heal!";
+			StartCoroutine ("waitDisplayTime");
+			this.SendMessage("affectLife", 40, SendMessageOptions.DontRequireReceiver);
 		} else if (name.Equals ("Bullet(Clone)")) {
 			_style.normal.textColor = Color.red;
 			_displayText = "Hit!!";
