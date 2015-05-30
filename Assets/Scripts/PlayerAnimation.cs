@@ -15,6 +15,6 @@ public class PlayerAnimation : MonoBehaviour {
 	}
 
 	void Decelerate (){
-		anim.SetBool ("accelerate", true);
+		anim.SetBool ("accelerate", false);
 	}
 }
