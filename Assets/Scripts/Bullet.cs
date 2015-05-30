@@ -4,7 +4,7 @@ using System.Collections;
 public class Bullet : MonoBehaviour {
 
     public float timeToLive = 1.5f;
-    public float velocity = 200;
+    public float velocity = 400;
 
     private SpriteRenderer sprite;
     private TrailRenderer trail;

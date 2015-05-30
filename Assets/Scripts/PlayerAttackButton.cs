@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerAttackButton : RandomButton {
 
-    public float fallBackForce = 25;
+    public float fallBackForce = 10;
     public GameObject bullet;
     private Transform shootPoint;
     private Rigidbody2D physics;
