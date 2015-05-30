@@ -19,7 +19,7 @@ public class PlayerAttackButton : RandomButton {
 
     void fire()
     {
-         shootPoint = transform.FindChild("ShootPoint");
+        shootPoint = transform.FindChild("ShootPoint");
         physics = GetComponent<Rigidbody2D>();
         //Add back force
         Vector2 direction = Quaternion.Euler(0, 0, transform.eulerAngles.z) * -Vector2.up;

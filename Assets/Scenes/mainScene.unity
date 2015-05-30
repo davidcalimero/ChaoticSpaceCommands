@@ -263,8 +263,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 140828, guid: 7daeddff790c149e5a319fc6e9c980b5, type: 2}
       propertyPath: m_Name
-      value: SpaceShip A
+      value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 21287180, guid: 7daeddff790c149e5a319fc6e9c980b5, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7f26e1430854c744a9fb36e6d33d211, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7daeddff790c149e5a319fc6e9c980b5, type: 2}
   m_IsPrefabParent: 0
@@ -314,47 +318,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8167c6ff15c6b2140abc2803b44141d7, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1190071592
-GameObject:
+--- !u!1001 &1117162219
+Prefab:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1190071594}
-  - 114: {fileID: 1190071593}
-  m_Layer: 0
-  m_Name: PowerUpCreator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1190071593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190071592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc99637d573855c4d89ca344bbe410b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Powerup: {fileID: 196580, guid: baa68eb2e382e994cab4d934b38993ca, type: 2}
-  respawntime: 5
---- !u!4 &1190071594
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190071592}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.36999989, y: 1.05999994, z: .600000024}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407370, guid: 1d3de3b789d3678498daa5ca2113478f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.36999989
+      objectReference: {fileID: 0}
+    - target: {fileID: 407370, guid: 1d3de3b789d3678498daa5ca2113478f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.05999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 407370, guid: 1d3de3b789d3678498daa5ca2113478f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 407370, guid: 1d3de3b789d3678498daa5ca2113478f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407370, guid: 1d3de3b789d3678498daa5ca2113478f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407370, guid: 1d3de3b789d3678498daa5ca2113478f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407370, guid: 1d3de3b789d3678498daa5ca2113478f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407370, guid: 1d3de3b789d3678498daa5ca2113478f, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418360, guid: 1d3de3b789d3678498daa5ca2113478f, type: 2}
+      propertyPath: _randomKeyTimeout
+      value: 25
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1d3de3b789d3678498daa5ca2113478f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1266811865
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +489,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 140828, guid: 7daeddff790c149e5a319fc6e9c980b5, type: 2}
       propertyPath: m_Name
-      value: SpaceShip B
+      value: Player 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7daeddff790c149e5a319fc6e9c980b5, type: 2}

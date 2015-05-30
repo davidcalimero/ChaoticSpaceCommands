@@ -9,11 +9,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 475748}
   - 212: {fileID: 21287180}
-  - 114: {fileID: 11450714}
   - 50: {fileID: 5065588}
   - 61: {fileID: 6180256}
   - 61: {fileID: 6128982}
-  - 114: {fileID: 11436042}
+  - 114: {fileID: 11485394}
+  - 114: {fileID: 11423894}
+  - 114: {fileID: 11455312}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Player
@@ -131,7 +132,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: .200000003, y: .200000003}
---- !u!114 &11436042
+--- !u!114 &11423894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7343b96563a9f4ca8656743887c213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAngle: 5
+--- !u!114 &11455312
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -142,10 +155,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468fe611fd3f14146b31df31a54b64cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireButton: b
+  globalRandomKeyManager: {fileID: 125376, guid: 1d3de3b789d3678498daa5ca2113478f,
+    type: 2}
+  _key: b
   fallBackForce: 25
   bullet: {fileID: 173802, guid: f193db2fa433a3e4f9a5e6ffeffbc62b, type: 2}
---- !u!114 &11450714
+--- !u!114 &11485394
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -153,12 +168,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 140828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b1a8b02753d56a4e86af7958ddf3a31, type: 3}
+  m_Script: {fileID: 11500000, guid: 44feb20a28f88ed45b8d4fdc8e411853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkButton: 
-  fireButton: 
-  waitTime: 10
+  globalRandomKeyManager: {fileID: 125376, guid: 1d3de3b789d3678498daa5ca2113478f,
+    type: 2}
+  _key: b
 --- !u!212 &21217722
 SpriteRenderer:
   m_ObjectHideFlags: 1
