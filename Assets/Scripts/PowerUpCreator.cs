@@ -12,7 +12,18 @@ public class PowerUpCreator : MonoBehaviour {
 
 	IEnumerator PowerUpShare(){
 		if (GameObject.FindGameObjectWithTag("Powerup") == null){
-			Instantiate(Powerup, new Vector2(Random.Range(-28F,25F), Random.Range(-0.5F,-28F)), Quaternion.identity);
+
+			GameObject a1 = GameObject.Find("sudoAnchorTop");
+			GameObject a2 = GameObject.Find("sudoAnchorBottom");
+
+			float x1 = a1.transform.position.x;
+			float y1 = a1.transform.position.y;
+
+			float x2 = a2.transform.position.x;
+			float y2 = a2.transform.position.y;
+
+
+			Instantiate(Powerup, new Vector2(Random.Range(x2,x1), Random.Range(y2,y1)), Quaternion.identity);
 		}
 
 		yield return new WaitForSeconds(respawntime);
