@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: 02a2e8410abf3604ab2155c1ef37cc20
-timeCreated: 1432965729
+timeCreated: 1432966659
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ship3_0
+    21300002: ship3_1
+    21300004: ship3_2
+    21300006: ship3_3
+    21300008: ship3_4
+    21300010: ship3_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +36,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +54,67 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: ship3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 490
+        width: 300
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ship3_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 490
+        width: 300
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ship3_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 490
+        width: 300
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ship3_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 236
+        width: 300
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ship3_4
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 236
+        width: 300
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ship3_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 236
+        width: 300
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

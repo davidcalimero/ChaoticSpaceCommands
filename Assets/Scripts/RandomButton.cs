@@ -6,7 +6,7 @@ public class RandomButton : MonoBehaviour {
 
 	public GameObject globalRandomKeyManager;
 	
-	public string _key = "b"; //makes ship fly forward
+	public string _key = "d"; //makes ship fly forward
 	//public string turnLeftButton; //rotates ship to the left
 	//public string turnRightButton; //rotates ship to the right
 	

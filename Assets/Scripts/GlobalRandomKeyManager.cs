@@ -33,9 +33,12 @@ public class GlobalRandomKeyManager : MonoBehaviour {
 
 	//returns an unused key, adding the previous one to the list of available keys
 	private string getUnusedRandomKey(string previousKey){
+		Debug.Log ("previous key " + previousKey);
 		if (!_possibleKeys.Contains (previousKey))
 			_possibleKeys.Add (previousKey);
 		int randIndex = Random.Range (0, _possibleKeysLenght);
+		Debug.Log("lenght " + _possibleKeysLenght);
+		Debug.Log ("index " + randIndex);
 
 		string ret = _possibleKeys[randIndex].ToString();
 		_possibleKeys.RemoveAt (randIndex);
