@@ -2199,7 +2199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c90e3e0a8eb49cf93ab8b5326c2e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _randomKeyTimeout: 25
+  _randomKeyTimeout: 35
   info: {fileID: 1409582202}
 --- !u!114 &959642745
 MonoBehaviour:
