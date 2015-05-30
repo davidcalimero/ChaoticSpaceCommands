@@ -8,11 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+using UnityEngine;
 
 public static class Utils {
 
-	public static float minMaxNormalization(float currentNumber, float oldMin, float oldMax, float newMin, float newMax){
+	public static float MinMaxNormalization(float currentNumber, float oldMin, float oldMax, float newMin, float newMax){
 		return ((currentNumber - oldMin) / (oldMax - oldMin)) * (newMax - newMin) + newMin; 
+	}
+
+	public static Color CreateColor(int position, int r, int g, int b){
+		return new Color(Utils.MinMaxNormalization(r - ((100 - position) / (float) 100) * r, 0, 255, 0, 1), Utils.MinMaxNormalization(g - ((100 - position) / (float) 100) * g, 0, 255, 0, 1), Utils.MinMaxNormalization(b - ((100 - position) / (float) 100) * b, 0, 255, 0, 1));
 	}
 }
 
