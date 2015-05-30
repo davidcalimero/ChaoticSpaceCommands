@@ -14,6 +14,7 @@ public class Powerup : MonoBehaviour {
 					break;
 				case "heal":
 					other.gameObject.transform.parent.SendMessage("affectLife", 40, SendMessageOptions.DontRequireReceiver);
+					GameObject.Find("LifeUp").GetComponent<AudioSource>().Play();
 					break;
 			}
 

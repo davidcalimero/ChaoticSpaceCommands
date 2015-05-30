@@ -16,8 +16,10 @@ public class PlayerLife : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (_life <= 0)
+		if (_life <= 0) {
+			GameObject.Find ("Explosion").GetComponent<AudioSource>().Play();
 			Destroy (this.gameObject);
+		}
 	}
 
 	void OnGUI () {	

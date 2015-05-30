@@ -40,6 +40,7 @@ public class PlayerAttackButton : RandomButton {
         //Instantiate bullet
         GameObject bulletFired = Instantiate(bullet, shootPoint.position, transform.rotation) as GameObject;
         bulletFired.SendMessage("SetOwner", transform.name);
+		ShotSound ();
     }
 
 	void StarFire(){
@@ -54,6 +55,7 @@ public class PlayerAttackButton : RandomButton {
 				//StartCoroutine("waitBulletTime");
 				shotsFired++;
 			}
+			ShotSound ();
 		}
 	}
 
@@ -61,5 +63,9 @@ public class PlayerAttackButton : RandomButton {
 		canStarFire = false;
 		yield return new WaitForSeconds (bulletTime);
 		canStarFire = true;
+	}
+
+	void ShotSound (){
+		gameObject.GetComponent<AudioSource> ().Play ();
 	}
 }
