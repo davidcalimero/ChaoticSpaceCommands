@@ -2101,7 +2101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c90e3e0a8eb49cf93ab8b5326c2e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _randomKeyTimeout: 10
+  _randomKeyTimeout: 40
 --- !u!1001 &967656037
 Prefab:
   m_ObjectHideFlags: 0
@@ -2277,7 +2277,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438596, guid: 8167c6ff15c6b2140abc2803b44141d7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.0189999994
+      value: -.368999988
       objectReference: {fileID: 0}
     - target: {fileID: 438596, guid: 8167c6ff15c6b2140abc2803b44141d7, type: 2}
       propertyPath: m_LocalPosition.z
