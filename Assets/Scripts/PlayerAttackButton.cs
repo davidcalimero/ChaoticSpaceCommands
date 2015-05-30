@@ -1,23 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerAttack : MonoBehaviour {
+public class PlayerAttackButton : RandomButton {
 
-	public string fireButton = "b";
     public float fallBackForce = 25;
     public GameObject bullet;
     private Transform shootPoint;
     private Rigidbody2D physics;
-	
-	void Start ()
-    {
-        shootPoint = transform.FindChild("ShootPoint");
-        physics = GetComponent<Rigidbody2D>();
-    }
+
 
 	void Update ()
     {
-        if (Input.GetKeyUp(fireButton))
+        if (Input.GetKeyUp(_key))
         {
             fire();
         }
@@ -25,6 +19,8 @@ public class PlayerAttack : MonoBehaviour {
 
     void fire()
     {
+         shootPoint = transform.FindChild("ShootPoint");
+        physics = GetComponent<Rigidbody2D>();
         //Add back force
         Vector2 direction = Quaternion.Euler(0, 0, transform.eulerAngles.z) * -Vector2.up;
         physics.AddForce(direction * fallBackForce);

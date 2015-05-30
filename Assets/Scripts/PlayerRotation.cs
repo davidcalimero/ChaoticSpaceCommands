@@ -24,10 +24,10 @@ public class PlayerRotation : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		if (Input.GetKey (_rotateLeft))
 			transform.Rotate (Vector3.forward, rotationAngle);
 		if (Input.GetKey (_rotateRight))
-			transform.Rotate (Vector3.forward, rotationAngle);
+			transform.Rotate (Vector3.forward, -rotationAngle);
 	}
 }

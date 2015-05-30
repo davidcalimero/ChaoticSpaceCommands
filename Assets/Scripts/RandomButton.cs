@@ -23,6 +23,7 @@ public class RandomButton : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+        Debug.Log("Resgistering key");
 		GlobalRandomKeyManager script = globalRandomKeyManager.GetComponent<GlobalRandomKeyManager> ();
 		script.registerButton (this);
 	}
