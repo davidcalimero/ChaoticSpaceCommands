@@ -3,7 +3,7 @@ using System.Collections;
 
 public class logCode : MonoBehaviour {
 
-	string[] pilha = new string[6]{"The Chaotic Game","(A)(Z)-Player one","(L)(P)-Player 2","(V)(B)-Player 3","Everything Else...","...Is Everlasting Chaos!!"};
+	string[] pilha = new string[6]{"The Chaotic Game","(A)(Z)-Player 1","(L)(P)-Player 2","(V)(B)-Player 3","Everything Else...","...Is Everlasting Chaos!!"};
 
 	// Use this for initialization
 	void Start () {
@@ -35,9 +35,6 @@ public class logCode : MonoBehaviour {
 	}
 
 	void OnGUI(){
-		GameObject anchor = GameObject.Find("info");
-		float x1 = anchor.transform.position.x;
-		float y1 = anchor.transform.position.y;
-		GUI.Label(new Rect(x1,y1,1000,2000), fullString());
+		GUI.Label(new Rect(Screen.width - 0.10f,Screen.height-0.15f,1000,2000), fullString());
 	}
 }
