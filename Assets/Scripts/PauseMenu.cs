@@ -16,9 +16,12 @@ public class PauseMenu : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyUp (KeyCode.Escape))
 			paused = true;
-		if (GameObject.FindGameObjectsWithTag ("Player").Length == 2) {
+        GameObject[] objects = GameObject.FindGameObjectsWithTag ("Player");
+        if (objects.Length == 2) {
 			gameFinished = true;
-			winner = GameObject.FindGameObjectWithTag ("Player").name;
+            winner = objects[0].name;
+            if (objects[1].name != "Body")
+                winner = objects[1].name;
 		}
 	}
 
